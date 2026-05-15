@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#c8202c">
+<meta name="robots" content="noindex, nofollow">
+<title>EMAPI · Salidas</title>
+
+<!-- Favicon (browser tab + home screen icon) -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="shortcut icon" href="favicon.svg">
+
+<!-- Add-to-home-screen label on iOS/Android -->
+<meta name="apple-mobile-web-app-title" content="Salidas">
+<meta name="application-name" content="EMAPI Salidas">
+
+<style>
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    margin: 0; padding: 0; min-height: 100%;
+    background: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #1f1f1f;
+  }
+  body {
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+    padding-bottom: calc(20px + env(safe-area-inset-bottom));
+    min-height: 100vh;
+  }
+  .gate {
+    background: #fff; border-radius: 16px; padding: 32px 28px;
+    max-width: 400px; width: 100%; text-align: center;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+    border: 1px solid #e0e0e0;
+  }
+  .brand-mark {
+    display: inline-block; background: #c8202c; color: #fff;
+    font-size: 14px; font-weight: 700; letter-spacing: 1.2px;
+    padding: 8px 16px; border-radius: 6px; margin-bottom: 20px;
+  }
+  h1 { font-size: 22px; margin: 0 0 8px; font-weight: 600; }
+  .subtitle { font-size: 14px; color: #5f5f5f; margin: 0 0 24px; line-height: 1.5; }
+  .info-box {
+    background: #fbe6e8; border-left: 3px solid #c8202c;
+    padding: 14px 16px; border-radius: 4px; margin-bottom: 20px;
+    text-align: left;
+  }
+  .info-box-title {
+    font-size: 12px; font-weight: 600; color: #c8202c;
+    text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;
+  }
+  .info-box-text { font-size: 13px; line-height: 1.5; color: #1f1f1f; }
+  .login-btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; padding: 14px;
+    background: #c8202c; color: #fff; border: none;
+    border-radius: 8px; font-size: 15px; font-weight: 600;
+    text-decoration: none; cursor: pointer; min-height: 48px;
+    transition: background 0.15s;
+  }
+  .login-btn:hover { background: #a81a24; }
+  .login-btn:active { transform: scale(0.98); }
+  .hint {
+    margin-top: 12px; font-size: 12px; color: #5f5f5f; line-height: 1.5;
+  }
+  .footer {
+    margin-top: 22px; padding-top: 18px;
+    border-top: 1px solid #e8e8e8;
+    font-size: 11px; color: #909090; line-height: 1.6;
+  }
+  .domain-hint {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    color: #5f5f5f; background: #f5f5f5;
+    padding: 2px 6px; border-radius: 4px; font-size: 11px;
+  }
+  .icon-mail { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<main class="gate">
+  <span class="brand-mark">EMAPI</span>
+  <h1>Salidas</h1>
+  <p class="subtitle">Consulta de despachos y entregas en tiempo real</p>
+
+  <div class="info-box">
+    <div class="info-box-title">Acceso por correo</div>
+    <div class="info-box-text">
+      Ingresá tu correo corporativo y te enviaremos un enlace para acceder. Solo emails autorizados de <span class="domain-hint">@emapi.com.ar</span>.
+    </div>
+  </div>
+
+  <a id="loginBtn" class="login-btn" href="#" rel="noopener">
+    <svg class="icon-mail" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    Acceder a Consultas
+  </a>
+  <p class="hint">Solo lectura. Vista de pendientes, parciales y entregas del día.</p>
+
+  <p class="footer">
+    ¿Problemas para acceder?<br>
+    Escribinos a <span class="domain-hint">soporte@emapisa.com.ar</span>
+  </p>
+</main>
+
+<script>
+  // ⚙️  CONFIG — paste your VIEWER deployment URL here (the one with ?app=viewer)
+  var VIEWER_URL = 'https://script.google.com/macros/s/AKfycbzNTp_vgGcgka_D4URTwQStsJTUQERvKY5BvhfJeFWoXhMSPSB5I7SoC7PLuVunpRyA/exec?app=viewer';
+  // ─────────────────────────────────────────────────────────────────────
+
+  document.getElementById('loginBtn').href = VIEWER_URL;
+</script>
+
+</body>
+</html>
