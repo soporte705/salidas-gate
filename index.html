@@ -106,8 +106,9 @@
 </main>
 
 <script>
-  // ⚙️  CONFIG — paste your VIEWER deployment URL here (the one with ?app=viewer)
-  var VIEWER_URL = 'https://script.google.com/macros/s/AKfycbypcGaN57gUpMpjicFT-qdtmuH4lBMuK48IWcSSXHlOKet0Kt8fJPzt0jRByk-9DFCOsQ/exec?app=viewer';
+  // ⚙️  CONFIG — NEW standalone Salidas Viewer deployment URL
+  // Standalone project: no ?app=viewer needed, doGet always serves Viewer
+  var VIEWER_URL = 'https://script.google.com/macros/s/AKfycbypcGaN57gUpMpjicFT-qdtmuH4lBMuK48IWcSSXHlOKet0Kt8fJPzt0jRByk-9DFCOsQ/exec';
   // ─────────────────────────────────────────────────────────────────────
 
   document.getElementById('loginBtn').href = VIEWER_URL;
